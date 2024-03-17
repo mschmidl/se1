@@ -28,6 +28,18 @@ public class NumberToTextHelperTest {
     }
 
     @Test
+    public void numberToText_when16() {
+        //assert
+        Assert.assertEquals("sech zehn", NumberToTextHelper.numberToText(16));
+    }
+
+    @Test
+    public void numberToText_when17() {
+        //assert
+        Assert.assertEquals("sieb zehn", NumberToTextHelper.numberToText(17));
+    }
+
+    @Test
     public void numberToText_when21() {
         //assert
         Assert.assertEquals("ein und zwanzig", NumberToTextHelper.numberToText(21));
