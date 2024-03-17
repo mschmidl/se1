@@ -4,16 +4,17 @@ import org.junit.Test;
 public class MaximumHelperTest {
 
     @Test
-    public void findMaximum_when_then() {
-        //arrange
-        int a = 0;
-        int b = -1;
-        int c = 2;
+    public void findMaximum_when_then1() {
+        Assert.assertEquals(2, MaximumHelper.findMaximum(2, 1, -1));
+    }
 
-        //act
-        int maximum = MaximumHelper.findMaximum(a, b, c);
+    @Test
+    public void findMaximum_when_then2() {
+        Assert.assertEquals(2, MaximumHelper.findMaximum(1, 2, -1));
+    }
 
-        //assert
-        Assert.assertEquals(c, maximum);
+    @Test
+    public void findMaximum_when_then3() {
+        Assert.assertEquals(2, MaximumHelper.findMaximum(-1, 1, 2));
     }
 }
