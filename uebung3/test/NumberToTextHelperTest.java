@@ -30,13 +30,13 @@ public class NumberToTextHelperTest {
     @Test
     public void numberToText_when16() {
         //assert
-        Assert.assertEquals("sech zehn", NumberToTextHelper.numberToText(16));
+        Assert.assertEquals("sechzehn", NumberToTextHelper.numberToText(16));
     }
 
     @Test
     public void numberToText_when17() {
         //assert
-        Assert.assertEquals("sieb zehn", NumberToTextHelper.numberToText(17));
+        Assert.assertEquals("siebzehn", NumberToTextHelper.numberToText(17));
     }
 
     @Test
@@ -46,11 +46,15 @@ public class NumberToTextHelperTest {
     }
 
     @Test
-    public void numberToText_when100() {
+    public void numberToText_when20() {
         //assert
-        Assert.assertEquals("ein hundert", NumberToTextHelper.numberToText(100));
+        Assert.assertEquals("zwanzig", NumberToTextHelper.numberToText(20));
     }
-
+    @Test
+    public void numberToText_when111() {
+        //assert
+        Assert.assertEquals("ein hundert elf", NumberToTextHelper.numberToText(111));
+    }
     @Test
     public void numberToText_when401() {
         //assert
