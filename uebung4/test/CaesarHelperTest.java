@@ -16,7 +16,8 @@ public class CaesarHelperTest {
 
         //assert
         Assert.assertNotNull(encodedMessage);
-        Assert.assertEquals(CharBuffer.wrap("cvvcem cv fcyp!".toCharArray()), CharBuffer.wrap(encodedMessage));
+        char[] expectedResult = "cvvcem cv fcyp!".toCharArray();
+        Assert.assertEquals(CharBuffer.wrap(expectedResult), CharBuffer.wrap(encodedMessage));
     }
 
 }
