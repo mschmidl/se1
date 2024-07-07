@@ -6,9 +6,13 @@ public abstract class Creature extends MapEntity {
     private int health;
     private int speed;
 
+    private Item mainHand;
+    private Item offHand;
+
     public Creature(int x, int y, int health, IEncounterResolver encounterResolver) {
         super(x, y, encounterResolver);
         setHealth(health);
+
     }
 
 
@@ -34,5 +38,21 @@ public abstract class Creature extends MapEntity {
 
     public boolean isGay() {
         return true;
+    }
+
+    public Item getMainHand() {
+        return mainHand;
+    }
+
+    public void setMainHand(Item mainHand) {
+        this.mainHand = mainHand;
+    }
+
+    public Item getOffHand() {
+        return offHand;
+    }
+
+    public void setOffHand(Item offHand) {
+        this.offHand = offHand;
     }
 }
