@@ -9,4 +9,9 @@ public class Goblin extends Enemy{
     public String getEncounterMessage() {
         return "small green man";
     }
+
+    @Override
+    public char getMapChar() {
+        return 'g';
+    }
 }

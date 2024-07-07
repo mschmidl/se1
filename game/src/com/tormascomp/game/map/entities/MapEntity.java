@@ -15,6 +15,7 @@ public abstract class MapEntity {
     }
 
     public abstract String getEncounterMessage();
+    public abstract char getMapChar();
 
     public int getX() {
         return x;

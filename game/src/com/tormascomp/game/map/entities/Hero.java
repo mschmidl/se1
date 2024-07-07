@@ -21,4 +21,9 @@ public class Hero extends Creature {
     public String getEncounterMessage() {
         return "wait wat";
     }
+
+    @Override
+    public char getMapChar() {
+        return 'x';
+    }
 }

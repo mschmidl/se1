@@ -12,4 +12,9 @@ public class Exit extends MapEntity {
     public String getEncounterMessage() {
         return "You`re a free man now good luck";
     }
+
+    @Override
+    public char getMapChar() {
+        return '☐';
+    }
 }

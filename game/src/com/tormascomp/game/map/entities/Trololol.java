@@ -9,4 +9,9 @@ public class Trololol extends Enemy{
     public String getEncounterMessage() {
         return "Trololol";
     }
+
+    @Override
+    public char getMapChar() {
+        return 'T';
+    }
 }

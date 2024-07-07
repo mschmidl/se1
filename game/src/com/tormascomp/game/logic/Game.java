@@ -28,7 +28,7 @@ public class Game {
         for (int i = 0; i < 100; i++) {
             int x = getMapCoord(random);
             int y = getMapCoord(random);
-            switch (random.nextInt(0, 2)) {
+            switch (random.nextInt( 2)) {
                 case 0 -> map.setMapEntity(x, y, new Trololol(x, y, 10));
                 case 1 -> map.setMapEntity(x, y, new Goblin(x, y, 5));
                 default -> {
@@ -38,17 +38,18 @@ public class Game {
         int x = getMapCoord(random);
         int y = getMapCoord(random);
         map.setMapEntity(getMapCoord(random), getMapCoord(random), new Exit(x,y));
+        map.setMapEntity(hero.getX(), hero.getY(), hero);
     }
 
     private static int getMapCoord(Random random) {
-        return random.nextInt(0, 20);
+        return random.nextInt(20);
     }
 
     public void doGameCycle() {
         if (hero.isGay()) {
             hero.setExperience(hero.getExperience() + 1);
         }
-
+        System.out.println(map.fetchMap());
         parseInput();
         resolveEncounter();
     }
@@ -87,18 +88,18 @@ public class Game {
     }
 
     private void moveRight() {
-        hero.setX(hero.getX() - 1);
-    }
-
-    private void moveDown() {
-        hero.setY(hero.getY() - 1);
-    }
-
-    private void moveLeft() {
         hero.setX(hero.getX() + 1);
     }
 
-    private void moveUp() {
+    private void moveDown() {
         hero.setY(hero.getY() + 1);
+    }
+
+    private void moveLeft() {
+        hero.setX(hero.getX() - 1);
+    }
+
+    private void moveUp() {
+        hero.setY(hero.getY() - 1);
     }
 }
