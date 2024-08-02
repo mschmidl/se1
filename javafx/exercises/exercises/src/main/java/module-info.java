@@ -5,4 +5,5 @@ module com.mschmidl.javafx.exercises {
 
     opens com.mschmidl.javafx.exercises to javafx.fxml;
     exports com.mschmidl.javafx.exercises;
+    exports com.mschmidl.javafx.exercises.fishandsharks;
 }
